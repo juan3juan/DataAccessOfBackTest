@@ -1,0 +1,14 @@
+D:\Yury\Program\BackTest\DataAccess\DataAccess\bin\Release\netcoreapp2.1\DataAccess.deps.json
+D:\Yury\Program\BackTest\DataAccess\DataAccess\bin\Release\netcoreapp2.1\DataAccess.runtimeconfig.json
+D:\Yury\Program\BackTest\DataAccess\DataAccess\bin\Release\netcoreapp2.1\DataAccess.runtimeconfig.dev.json
+D:\Yury\Program\BackTest\DataAccess\DataAccess\bin\Release\netcoreapp2.1\DataAccess.dll
+D:\Yury\Program\BackTest\DataAccess\DataAccess\bin\Release\netcoreapp2.1\DataAccess.pdb
+D:\Yury\Program\BackTest\DataAccess\DataAccess\obj\Release\netcoreapp2.1\DataAccess.csprojAssemblyReference.cache
+D:\Yury\Program\BackTest\DataAccess\DataAccess\obj\Release\netcoreapp2.1\DataAccess.csproj.CoreCompileInputs.cache
+D:\Yury\Program\BackTest\DataAccess\DataAccess\obj\Release\netcoreapp2.1\DataAccess.RazorAssemblyInfo.cache
+D:\Yury\Program\BackTest\DataAccess\DataAccess\obj\Release\netcoreapp2.1\DataAccess.RazorAssemblyInfo.cs
+D:\Yury\Program\BackTest\DataAccess\DataAccess\obj\Release\netcoreapp2.1\DataAccess.AssemblyInfoInputs.cache
+D:\Yury\Program\BackTest\DataAccess\DataAccess\obj\Release\netcoreapp2.1\DataAccess.AssemblyInfo.cs
+D:\Yury\Program\BackTest\DataAccess\DataAccess\obj\Release\netcoreapp2.1\DataAccess.RazorTargetAssemblyInfo.cache
+D:\Yury\Program\BackTest\DataAccess\DataAccess\obj\Release\netcoreapp2.1\DataAccess.dll
+D:\Yury\Program\BackTest\DataAccess\DataAccess\obj\Release\netcoreapp2.1\DataAccess.pdb
