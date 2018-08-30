@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace DataAccess.Model
 {
     /// <summary>
-    /// Class used to store Security Prcing
+    /// Class used to store Security Pricng
     /// </summary>
     public class PricingData
     {

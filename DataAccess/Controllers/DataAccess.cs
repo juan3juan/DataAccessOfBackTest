@@ -34,7 +34,7 @@ namespace DataAccess.Controllers
             string securityKey = "BABA";
 
             Security security = new Security(securityKey);
-            var x = Path.GetDirectoryName(Assembly.GetEntryAssembly().Location);
+            //var x = Path.GetDirectoryName(Assembly.GetEntryAssembly().Location);
             #region Load Security Pricing Data
             //string path = @"D:\Yury\Program\BackTest\DataAccess\DataAccess\DataFile\BABA.txt";
             string path = Path.Combine(_hosting.ContentRootPath, @"DataFile\BABA.txt");
@@ -61,6 +61,49 @@ namespace DataAccess.Controllers
 
             return Ok(SecurityMaster);
           
+        }
+
+        [HttpGet("[action]")]
+        public async Task<IActionResult> DataFromMultiFile()
+        {
+            try
+            {
+                if (SecurityMaster.Count != 0)
+                {
+                    return Ok(SecurityMaster);
+                }
+
+                string path = Path.Combine(_hosting.ContentRootPath, @"DataFile\");
+                DirectoryInfo di = new DirectoryInfo(path);
+                //DirectoryInfo[] diArr = di.GetDirectories();
+                FileInfo[] ff = di.GetFiles("*.txt");
+
+                for (int i = 0; i < ff.Length; i++)
+                {
+                    string securityKey = ff[i].Name.Replace(".txt", "");
+                    Security security = new Security(securityKey);
+                    StreamReader sr = ff[i].OpenText();
+                    List<PricingData> ps = new List<PricingData>();
+                    string line;
+                    while ((line = sr.ReadLine()) != null)
+                    {
+                        string[] values = line.Split('\t');
+                        DateTime date;
+                        DateTime.TryParse(values[0].Trim(), out date);
+                        double priceStore;
+                        double.TryParse(values[1].Trim(), out priceStore);
+                        ps.Add(new PricingData(date, priceStore));
+                        Console.WriteLine(ps.Last().Date.ToString() + " " + ps.Last().ClosePrice.ToString());
+                    }
+                    security.SecurityPricingData = ps;
+                    SecurityMaster.Add(securityKey, security);
+                }
+                return Ok(SecurityMaster);
+            }
+            catch(Exception ex)
+            {
+                return BadRequest(ex.ToString());
+            }
         }
     }
 }
